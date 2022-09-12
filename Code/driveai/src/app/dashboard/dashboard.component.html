@@ -1,0 +1,167 @@
+<div class="header">
+
+<div class = "row">
+    <div class = "col-lg-1">
+        <img class = "miniLogo"src = "assets/images/logo.jpg">
+        </div>
+        <div class="col-lg-2 title">
+            driveAI
+        </div>
+        <div class="col-lg-8"></div>
+        <div class="navs col-lg-">
+            
+            <button>
+                <i class="navs fa fa-cogs"></i>
+            </button>
+        </div>
+        <div class="navs col-lg-">
+            
+            <button>
+                <i class="fa fa-user-circle"></i>
+            </button>
+        </div>
+        <div class="navs col-lg-">
+            
+            <button>
+                <i class="fa fa-sign-out"></i>
+            </button>
+        </div>
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="subHeader">
+    <div class = "row">
+        <div class="col-lg- contenttext" id="tab1Click">
+            <i class="fa fa-bars"></i>
+            <a routerLink="/dashboard" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Dashboard</a></div>
+    <div class="col-lg- contenttext" id="tab3Click">
+    <i class="fa fa-signal"></i>
+    <a routerLink="/training" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Model Training</a></div>
+    
+
+    </div>
+    
+    </div>
+
+    <div class="main" id="tab1">
+        <div class="nameSection">
+            Welcome {{user}}
+        </div>
+        <div style="width: 92%; margin: auto;" >
+            <div class = "row">
+            <div class="col-lg-3 info">
+                <div style="background-color: rgb(51,152,204); margin: auto; height:100%" class="card">
+                    <div class="title">
+                        RAM Usage
+                    </div>
+                    <div class="col-lg-8 detail">
+                        65% 
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg> -->
+                        <i class="fa fa-arrow-up"></i>
+                    </div>
+                    <div class="col-lg-4 logo" style="background-color: rgb(115,183,218);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16">
+                            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 info">
+                <div style="background-color: rgb(153,102,255); margin: auto; height:100%" class="card">
+                    <div class="title">
+                        Disk Usage
+                    </div>
+                    <div class="col-lg-8 detail">
+                        65% 
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg> -->
+                        <i class="fa fa-arrow-up"></i>
+
+                    </div>
+                    <div class="col-lg-4 logo" style="background-color: rgb(186,147,254);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-hdd-fill" viewBox="0 0 16 16">
+                            <path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-1zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM.91 7.204A2.993 2.993 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782L.91 7.204z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 info">
+                <div style="background-color: rgb(255,103,153); margin: auto; height:100%" class="card">
+                    <div class="title">
+                        Connection
+                    </div>
+                    <div class="col-lg-8 detail" style="font-size: 35;padding-top: 45px;">
+                        socketX02 
+
+                    </div>
+                    <div class="col-lg-4 logo" style="background-color: rgb(255,147,184);" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+                            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 0 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 info">
+                <div style="background-color: rgb(99,205,55); margin: auto; height:100%" class="card">
+                    <div class="title">
+                        Running For
+                    </div>
+                    <div class="col-lg-8 detail" style="font-size: 35;padding-top: 45px;">
+                        89 mins 
+
+                    </div>
+                    <div class="col-lg-4 logo" style="background-color: rgb(150,219,110);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-distribute-horizontal" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5zm-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"/>
+                            <path d="M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v10z"/>
+                          </svg>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "row">
+            <div class = "col-lg-1"></div>
+            
+            <div class="charts col-lg-3 chart" style="margin-left: 3%;" id="pieChartLoc">
+                <p>RAM Distribution</p>
+                <canvas baseChart 
+                [data]="barData" 
+                [type]="'bar'"
+                [options]="chartOptions"
+              >
+              </canvas>
+            </div>
+            <div class="col-lg-3 chart"  id="barChartLoc">
+            <p>Collision Frequency</p>
+            <canvas baseChart 
+            [data]="barData" 
+            [type]="'bar'"
+            [options]="chartOptions"
+          >
+          </canvas>
+            </div>
+            <div class="col-lg-3 chart"  id="lineChartLoc">
+                <p>Resource usage with respect to time</p>
+                <canvas baseChart 
+                [data]="lineData" 
+                [type]="'line'"
+                [options]="chartOptions"
+              >    </canvas>
+            </div>
+        
+        </div>
+
+    </div>   
+
+    
+   

@@ -1,0 +1,159 @@
+<div class="header">
+
+    <div class = "row">
+        <div class = "col-lg-1">
+            <img class = "miniLogo"src = "assets/images/logo.jpg">
+            </div>
+            <div class="col-lg-2 title">
+                driveAI
+            </div>
+            <div class="col-lg-8"></div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="navs fa fa-cogs"></i>
+                </button>
+            </div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="fa fa-user-circle"></i>
+                </button>
+            </div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="fa fa-sign-out"><a routerLink="/dashboard" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);"></a></i>
+                </button>
+            </div>
+            
+            
+    
+            
+        </div>
+    </div>
+    
+    <div class="subHeader">
+        <div class = "row">
+            <div class="col-lg- contenttext" id="tab1Click">
+                <i class="fa fa-bars"></i>
+                <a routerLink="/dashboard" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Dashboard</a></div>
+        <div class="col-lg- contenttext" id="tab3Click">
+        <i class="fa fa-signal"></i>
+        <a routerLink="/training" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Model Training</a></div>
+        
+    
+        </div>
+        
+        </div>
+        <form [formGroup] = "dataForm" (ngSubmit)="submit(dataForm)" autocomplete="off">
+        <div id="tab2" class="main">
+            <div class = "row">
+            <div class="col-lg-5 select">
+                <p>Choose Dataset</p>
+                <select name="" id="dataset" formControlName = "dataset">
+                    <option >Cars-Dataset-1</option>
+                    <option >Cars-Dataset-2</option>
+                    <option >Pedestrians-1</option>
+                    <option >Traffic-Lights-1</option>
+                    <option >Traffic-Lights-2</option>
+                
+                  </select>
+                  <br><br><br><br>
+                  <div >
+                    <p>Enter Epochs:
+                    <input type="number" id="epochs" style="background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #000000;" formControlName = "epochs"></p>
+                    
+                     <p>Enter Validation Size:
+                        <input type="number" id="val_size" style="background: transparent;
+                        border: none;
+                        border-bottom: 1px solid #000000;" formControlName = "validation"></p>
+                    </div>
+                </div>
+            
+                <div class="col-lg-5 select">
+                    <p>Select Metrics</p>
+                    <table class="option">
+                        <tr>
+                            <td >
+                                <input type="checkbox" id="Metrics" name="Precision" (change)="onMetricsChange($event)" value="   metrics/precision" >
+                                <label for="Precesion">Precision</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Metrics" name="Recall" (change)="onMetricsChange($event)" value="      metrics/recall">
+                                <label for="Recall">Recall</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="Metrics" name="MAP05"  (change)="onMetricsChange($event)" value="     metrics/mAP_0.5">
+                                <label for="MAP05">MAP 0.5</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="Metrics" name="MAP5to9"  (change)="onMetricsChange($event)" value="metrics/mAP_0.5:0.95">
+                                <label for="MAP5to9">MAP 0.5:0.95</label>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <br>
+                      <div >
+                          <p>Select Loss</p>
+                        <table class="option">
+                            <tr>
+                                <td >
+                                    <input type="checkbox" id="Loss" name="tbox"  (change)="onLossChange($event)" value="      train/box_loss">
+                                    <label for="tbox">TrainBox Loss</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="Loss" name="tobj"  (change)="onLossChange($event)" value="      train/obj_loss">
+                                    <label for="tobj">Train Object Loss</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="Loss" name="vbox"  (change)="onLossChange($event)" value="        val/box_loss">
+                                    <label for="vbox">Val Box Loss</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="Loss" name="vobj"  (change)="onLossChange($event)" value="        val/obj_loss">
+                                    <label for="vobj">Val Object Loss</label>
+                                </td>
+                            </tr>
+                        </table>
+                    <br>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                   
+                    <div class="col-lg-11 bottomToggle" >
+                        <div class="col-lg-5 toggle">
+                            <!-- Switch on Recording <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                              </label>  -->
+
+
+                              <div class="sbutton">
+                                <input type="submit" class="submit" value="START" id="startTrain">
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-5 toggle">
+                            Allow traffic <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                              </label> 
+                        </div> -->
+                    </div>
+                    <div></div>
+                    
+    
+        </div>
+    </form>
+    <mat-progress-bar mode="query" *ngIf = "isTraining"></mat-progress-bar>

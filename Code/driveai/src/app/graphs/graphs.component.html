@@ -1,0 +1,72 @@
+<div class="header">
+
+    <div class = "row">
+        <div class = "col-lg-1">
+            <img class = "miniLogo"src = "assets/images/logo.jpg">
+            </div>
+            <div class="col-lg-2 title">
+                driveAI
+            </div>
+            <div class="col-lg-8"></div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="navs fa fa-cogs"></i>
+                </button>
+            </div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="fa fa-user-circle"></i>
+                </button>
+            </div>
+            <div class="navs col-lg-">
+                
+                <button>
+                    <i class="fa fa-sign-out"><a routerLink="/dashboard" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);"></a></i>
+                </button>
+            </div>
+            
+            
+    
+            
+        </div>
+    </div>
+  
+    
+
+    <div class="subHeader">
+        <div class = "row">
+            <div class="col-lg- contenttext" id="tab1Click">
+                <i class="fa fa-bars"></i>
+                <a routerLink="/dashboard" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Dashboard</a></div>
+        <div class="col-lg- contenttext" id="tab3Click">
+        <i class="fa fa-signal"></i>
+        <a routerLink="/training" routerLinkActive="active" style="text-align: end; text-decoration: none;color:rgb(2,0,133);">&nbsp; Model Training</a></div>
+        
+    
+        </div>
+        
+    
+        <br>
+        <div id="tab3" class="main">
+            <br>
+                <div class = "row">
+                <div *ngIf = "metrics" class="col-lg-5 chart"  id="accuracyDiv">
+                    <p>Accuracy</p>
+                    <canvas baseChart 
+                    [data]="metricsData" 
+                    [type]="'line'"
+                    [options]="chartOptions"
+              >    </canvas>    
+                </div>
+                <div *ngIf = "losses" class="col-lg-5 chart"  id="accuracyDiv">
+                    <p>Loss</p>
+                    <canvas baseChart 
+                    [data]="lossesData" 
+                    [type]="'line'"
+                    [options]="chartOptions"
+              >    </canvas>    
+                </div>
+            </div>
+        </div>
