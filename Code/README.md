@@ -1,8 +1,8 @@
 ## Code
 
-### Code/DriveAI
+### Code/driveai
         This directory contains enitre Angular section of the project.
 
-### Code/DriveAI Server
+### Code/driveai server
         This directory contains server side code and the yolov5 model.
         
